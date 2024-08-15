@@ -23,7 +23,7 @@ const App: React.FC = () => {
   //fetch all players for search
   useEffect(() => {
     axios
-      .get<Player[]>("http://localhost:5000/players")
+      .get<Player[]>("https://skol-game-api.onrender.com/players")
       .then((response) => {
         setPlayers(response.data);
       })
@@ -35,7 +35,7 @@ const App: React.FC = () => {
   //fetch random player to guess once site loaded
   useEffect(() => {
     axios
-      .get<Player>("http://localhost:5000/players/random")
+      .get<Player>("https://skol-game-api.onrender.com/players/random")
       .then((response) => {
         setRandomPlayer({
           ...response.data,
@@ -49,7 +49,7 @@ const App: React.FC = () => {
 
   const newRandomPlayer = () => {
     axios
-      .get<Player>("http://localhost:5000/players/random")
+      .get<Player>("https://skol-game-api.onrender.com/players/random")
       .then((response) => {
         setModalVisible(false);
         setGuessedPlayers([]);
