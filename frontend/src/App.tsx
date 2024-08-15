@@ -214,7 +214,7 @@ const App: React.FC = () => {
               className="border border-y-2 overflow-y-auto max-h-96 h-auto absolute w-full bg-white z-10"
               ref={listRef}
             >
-              {filteredPlayers.map((player) => (
+              {filteredPlayers.map((player: Player) => (
                 <li
                   key={player._id}
                   onClick={() => handlePlayerClick(player)}
@@ -234,7 +234,7 @@ const App: React.FC = () => {
           </div>
         )}
         <ul>
-          {guessedPlayers.map((player, index) => (
+          {guessedPlayers.map((player: Player, index: number) => (
             <li className="m-4 bg-gray-100 border border-gray-300" key={index}>
               <div className="grid grid-cols-3 items-center">
                 <div className="flex items-center justify-center border-r-2 border-gray-500 h-20 px-4 font-bold">
