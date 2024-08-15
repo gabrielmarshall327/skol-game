@@ -114,8 +114,6 @@ const App: React.FC = () => {
     if (randomPlayer && player._id === randomPlayer._id) {
       setModalVisible(true);
     }
-
-    console.log(randomPlayer);
   };
 
   //if player is close or matches guess for draft year
