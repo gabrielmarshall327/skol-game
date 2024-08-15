@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 mongoose
-  .connect(process.env.MONGODB_URL)
+  .connect(process.env.MONGODB_URL) //in env
   .then(() => {
     app.listen(port, () => {
       console.log(`App running on port ${port}.`);
@@ -23,4 +23,4 @@ mongoose
     console.log(error);
   });
 
-app.use('/players', playersRoute);
+app.use("/players", playersRoute);
