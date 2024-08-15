@@ -1,5 +1,4 @@
 backend/config.js
-.env
 # Logs
 logs
 *.log
